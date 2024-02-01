@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+
+<body style="text-align:center">
+	
+	<div id="counter" class="num" data-t="683">
+		<!-- counts -->
+	</div>
+    <div id="counter" class="num" data-t="129">
+		<!-- counts -->
+	</div>
+
+    <div id="counter" class="num" data-t="1200" >
+		<!-- counts -->
+	</div>
+
+	<script>
+let tags = document.querySelectorAll(".num")
+let interval = 1000;
+
+tags.forEach((v)=>{
+
+	let start = 0;
+	let end = parseInt(v.getAttribute("data-t"));
+	// console.log(end)
+	duration = Math.floor(interval/end);
+	// console.log(duration)
+
+	let counter = setInterval(function(){
+		start = start+1;
+		console.log(v)
+		v.textContent = start;
+		// console.log(v.textContent)
+		if(start == end)
+		{
+			clearInterval(counter)
+		}
+
+
+	},duration)
+
+})
+	
+	</script>
+</body>
+</html>

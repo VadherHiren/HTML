@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x 
+        {
+            height: 100px;
+            width: 100px;
+            background: lightblue;
+            font-family: cursive;
+        }
+        .y 
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="i" class="w" name="n">hello1</h1>
+    <h1 id="i" class="w" name="n">hello2</h1>
+    <h1 id="i" class="w" name="n">hello3</h1>
+    <h1 id="i" class="w" name="n">hello4</h1>
+    
+
+    <script>
+
+        // test = document.querySelectorAll("#i");
+        // test = document.getElementsByClassName('w');
+        // test = document.querySelectorAll(".w");
+        // test = document.getElementsByTagName('h1');
+
+        // test = document.querySelectorAll("h1");
+       test =  document.getElementsByName("n");
+
+        console.log(test)
+
+        // test[0].style.color ="red"
+        // test[1].style.color ="red"
+        // test[2].style.color ="red"
+        // test[3].style.color ="red"
+
+        for(i=0;i<test.length;i++)
+        {
+            if(i%2 ==0 )
+            {
+                document.write(i)
+                // test[i].style.color ="red"
+                test[i].className = "x";
+                // test[i].classList.add('x',"y")
+                // test[i].classList.remove("x")
+            }
+            else
+            {
+                test[i].style.color ="green"
+            }
+            // test[i].style.color ="red"
+        }
+
+        console.log(test.length)
+
+    </script>
+    
+</body>
+</html>
